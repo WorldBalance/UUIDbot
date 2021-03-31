@@ -1,0 +1,12 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../:\Users\vaho0419\IdeaProjects\UUIDbot\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+/package-lock.json
+
+/node_modules
+/dist

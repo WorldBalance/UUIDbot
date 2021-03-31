@@ -1,0 +1,31 @@
+{
+  "name": "uuidbot",
+  "version": "1.0.0",
+  "description": "Telegram Bot that can create UUID by a mask",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "build": "npm run build-ts && npm run tslint",
+    "serve": "NODE_ENV=production node dist/bot.js",
+    "build-ts": "tsc",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WorldBalance/UUIDbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WorldBalance/UUIDbot/issues"
+  },
+  "homepage": "https://github.com/WorldBalance/UUIDbot#readme",
+  "dependencies": {
+    "telegraf": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "tslint": "^6.1.3",
+    "typescript": "^4.2.3"
+  }
+}
