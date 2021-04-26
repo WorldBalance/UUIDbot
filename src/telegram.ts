@@ -1,4 +1,5 @@
-const { Telegraf } = require("telegraf");
+import {Telegraf} from "telegraf";
+import {BOT_TOKEN} from "./config";
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf(BOT_TOKEN);
 export default bot;

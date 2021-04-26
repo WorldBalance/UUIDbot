@@ -12,7 +12,8 @@
     "lib": ["es2017"],
     "paths": {
       "*": ["node_modules/*", "src/types/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*", "src/locales/*.json"]
+  "include": ["src/**/*"]
 }
