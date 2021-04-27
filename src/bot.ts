@@ -53,14 +53,21 @@ bot.command("find", (ctx: Context) => {
         }
     } else {
         let result = findByValue(args.mask, masks);
-        if (args.mask.match(UUID_MASK) && result) {
-            ctx.reply(BotReplies.MASK_IS_FOUND + result);
-        } else if (result) {
+        if (args.mask.match(UUID_MASK) && result.length) {
+            let reply: string;
+            if (result.length > 1) {
+                reply = BotReplies.MASKS_ARE_FOUND;
+                result.forEach((mask: string) => reply += `${mask}\n`);
+            } else {
+                reply = BotReplies.MASK_IS_FOUND + result[0];
+            }
+            ctx.reply(reply);
+        } else if (result.length) {
             ctx.reply(BotReplies.MASK_IS_WRONG);
         } else {
-            result = findByName(args.mask, masks);
+            const reply = findByName(args.mask, masks);
             if (result) {
-                ctx.reply(BotReplies.MASK_IS_FOUND + result);
+                ctx.reply(BotReplies.MASK_IS_FOUND + reply);
             } else {
                 ctx.reply(BotReplies.MASK_IS_NOT_FOUND);
             }
